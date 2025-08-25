@@ -1,0 +1,3 @@
+2025-08-24 20:06:48.230673+08:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM TWEETS TWEETS [*]NAME"; SQL statement:
+SELECT * FROM TWEETS TWEETS NAME [42000-232]
