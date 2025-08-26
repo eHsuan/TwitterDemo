@@ -39,7 +39,7 @@ public class TweetServiceTest {
     void testCreateTweetUserNotFound() {
         // 模擬查不到使用者
         when(userRepository.findById(99L)).thenReturn(Optional.empty());
-        TweetDTO tweetDTO = new TweetDTO("User Test3", 99L);
+        TweetDTO tweetDTO = new TweetDTO("User Test4", 99L);
 
         // 期望丟出 RuntimeException，訊息包含 "User not found"
         assertThatThrownBy(() -> tweetService.createTweet(tweetDTO))
