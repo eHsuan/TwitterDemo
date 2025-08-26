@@ -25,7 +25,7 @@ jobs:
       run: ./mvnw clean package -DskipTests=false
 
     - name: Build Docker image
-      run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/twitterdemo:latest .
+      run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/twitterdemo:${{ github.ref_name }} .
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v3
@@ -34,4 +34,4 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Push image to Docker Hub
-      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/twitterdemo:latest
+      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/twitterdemo:${{ github.ref_name }}
