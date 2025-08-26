@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: twitterdemo
-        image: ac131151/twitterdemo:latest   # 推到 Docker Hub 的 image
+        image: ac131151/twitterdemo:v1.0.0.1   # 推到 Docker Hub 的 image
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
